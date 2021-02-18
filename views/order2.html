@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Food Order, Continued</h1>
 
-    <form action="summary" method="POST" class="form-horizontal">
+    <form action="#" method="POST" class="form-horizontal">
 
         <!-- get condiments -->
         <div class="form-group">
@@ -15,6 +15,9 @@
                               name="conds[]"
                               value="{{ @cond }}"> {{ ucfirst(@cond) }}</label><br>
                 </repeat>
+                <check if="{{ isset(@errors['conds']) }}">
+                    {{ @errors['conds'] }}
+                </check>
             </div>
         </div>
 
